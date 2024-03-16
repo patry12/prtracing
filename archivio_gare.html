@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>archivio_gare</title>
+</head>
+<body>
+    <a id="home" href="home.html">HOME</a>
+    <button id="colore">CHANGE</button>
+
+
+<style>
+    body{background-color: black;}
+    #home{border: solid 2px white; position: absolute; color:white; padding: 15px;}
+    #colore{position: relative; left: 150px; background-color:black; color: yellow;}
+</style>
+
+<script>
+    const btn = document.querySelector('button');
+    
+    btn.addEventListener('click',() => {
+        document.body.style.background = 'red';
+    });
+   
+</script>
+
+</body>
+</html>
