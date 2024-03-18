@@ -6,15 +6,58 @@
 </head>
 <body>
     <div id="conteineruno"><div id="boxuno"><div><div id="boxdue"></div></div></div></div>
-    <div id="conteinerdue">PILOTI</div>
-    <div id="conteinertre">ARCHIVIO</div>
+    <div id="conteinerdue"></div>
+    <div id="conteinertre"></div>
+    <div id="nav">
+        <ul>
+            <li>home</li>
+            <li>iracing</li>
+            <li>acc</li>
+
+        </ul>
+    </div>
+    <div id="menubtn"></div>
+        
+    
 <style>
     body{background-color: black;
-    width: 767px;
+    width:auto;
     height: auto;
+    margin:0px; padding: 0px;
     }
+    
+    #nav{
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        right: -250px;
+        top: 0px;
+        background-color: rgb(38, 0, 255);
+        transition: 0.5s;
+    }
+    #nav ul li{
+        list-style: none;
+        margin: 50px 20px;
+        color: white;
+    }
+     #menubtn{
+        border: solid 1px rgb(0, 47, 255);
+        cursor: pointer;
+        overflow: hidden;
+        background-image: url(prt.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        position:absolute;
+        margin-left:500px;
+        top: 30px;
+     }
     #conteineruno{
-        border: solid 5px red; 
+        border: solid 1px red none;
+        margin-left: 0px; 
         color: white;
         display: flex;
         justify-content:center;
@@ -23,28 +66,29 @@
         overflow: hidden;
         font-weight: bolder;
         position: absolute; 
-        margin-left: 20%;
-        width: 767px;
+        width: 480px;
         height: 250px;
         margin-top:0px;
         background-image:url(mercedesgt3.png);
-        background-position: center;
+        background-position: left;
         background-size: contain; background-repeat: no-repeat;
-    }
+        }
 
-    #boxuno{border: solid 3px gold none;
+    #boxuno{border: solid 1px gold none;
     position: absolute;
+    left: 255px;
     width: 165px;
     height: 130px;
-    z-index: -100;
+    z-index: -50;
     background-image: url(gt3logo.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 240px;
     }
 
-    #boxdue{border: solid 2px blue none;
-    position: absolute;
+    #boxdue{border: solid 1px blue  none;
+    position: relative;
+    margin-left: -110px;
     width: 150px;
     height:120px;
     margin-top:68%;
@@ -53,13 +97,14 @@
     background-image: url(iracing-logo.png);
     background-position: center;
     background-size: cover; 
-    background-repeat: no-repeat;}  
+    background-repeat: no-repeat;
+    margin-top: 145px;}  
 
-    #conteinerdue{border: solid 5px green;
+    #conteinerdue{border: solid 1px green none;
         color: red;
          position: absolute;
-          margin-left: 20%;
-          width: 765px;
+          margin-left:0px;
+          width: 480px;
           height: 250px;
           margin-top:300px;
           background-image: url(lmhd.png);
@@ -68,11 +113,11 @@
           background-size: contain;
         }
 
-    #conteinertre{border: solid 5px white; 
+    #conteinertre{border: solid 1px white none; 
         color: gold;
         position: absolute;
-        margin-left: 20%;
-        width: 765px;
+        margin-left: 0px;
+        width: 480px;
         height: 250px;
         margin-top: 600px;
         background-image: url(lmp3trasparente.png);
@@ -81,10 +126,23 @@
           background-size: contain;
      }
 
-     @media screen and (max-widht:767px){
+     /*@media screen and (max-widht:767px){
         
-     }
+     }*/
 
 </style>
+<script>
+    var menubtn = document.getElementById("menubtn")
+    var nav = document.getElementById("nav")
+    nav.style.right = "-250px"
+    menubtn.onclick = function(){
+        if(nav.style.right == "-250px"){
+        nav.style.right = "0"; 
+    }
+    else{
+        nav.style.right = "-250px"
+    }}
+
+</script>
 </body>
 </html>
