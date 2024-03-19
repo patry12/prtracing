@@ -2,147 +2,76 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>iracing2</title>
+    <title>sitoiracing</title>
 </head>
 <body>
-    <div id="conteineruno"><div id="boxuno"><div><div id="boxdue"></div></div></div></div>
-    <div id="conteinerdue"></div>
-    <div id="conteinertre"></div>
-    <div id="nav">
-        <ul>
-            <li>home</li>
-            <li>iracing</li>
-            <li>acc</li>
+  
+    <header id="header-up">
+      <ul>
+         <li><a href="archivio_gare.html                                              ">ARCHIVIO GARE</a></li>
+         <li><a href="piloti.html">PILOTI</a></li>
+         <li><a href="social">SOCIAL</a></li>
+         </ul>
+    </header>
+     <div id="sfondocentrale"><div id="sfondo"></div></div>
+     <div id="fotolmp2"></div>
+     <div id="fotoporschecup"></div>
+     <div id="fotoporschecuptre"></div>
+     <div id="fotomercedesgt3"></div>
+     <div id="img-lmp2"></div>
+     <div id="img-porschecup"></div>
+     <div id="img-gt3"></div>
+     <div id="img-formulab"></div>
+     <div id="img-gtendurance"></div>
+     <div id="img-enduranceimsa"></div>
+     <div id="img-gt4"></div>
+     <div id="fotolmhd"></div>
+     <a href=""> <div id="discord"></div></a>
 
-        </ul>
-    </div>
-    <div id="menubtn"></div>
-        
-    
-<style>
-    body{background-color: black;
-    width:auto;
-    height: auto;
-    margin:0px; padding: 0px;
-    }
-    
-    #nav{
-        width: 250px;
-        height: 100vh;
-        position: fixed;
-        right: -250px;
-        top: 0px;
-        background-color: rgb(38, 0, 255);
-        transition: 0.5s;
-    }
-    #nav ul li{
-        list-style: none;
-        margin: 50px 20px;
-        color: white;
-    }
-     #menubtn{
-        border: solid 1px rgb(0, 47, 255);
-        cursor: pointer;
-        overflow: hidden;
-        background-image: url(prt.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100%;
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        position:absolute;
-        margin-left:500px;
-        top: 30px;
-     }
-    #conteineruno{
-        border: solid 1px red none;
-        margin-left: 0px; 
-        color: white;
-        display: flex;
-        justify-content:center;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 100%;
-        overflow: hidden;
-        font-weight: bolder;
-        position: absolute; 
-        width: 480px;
-        height: 250px;
-        margin-top:0px;
-        background-image:url(mercedesgt3.png);
-        background-position: left;
-        background-size: contain; background-repeat: no-repeat;
-        }
+    <style>
+ body{background-color: black;}
+ a{color: white; text-decoration: none; padding:0px; font-family: sans-serif;}
+ ul{margin-left: 350px;}
+     li{border: solid 2px blue none; display: inline; width:15%; padding:20px; word-spacing:5px; list-style-type: none; text-decoration: none;}
+#sfondocentrale{ border: solid 2px red none; border-radius: 10px; width:550px; height: 350px; position: absolute; left: 350px; top:65px; background-image: url(curvamonza.avif); background-repeat: no-repeat; background-position:top;animation: sfondo 10s infinite linear;}
+#sfondo{background-image: url(prt.jpg); position: relative; left: 169px; top:90px; border: solid 2px red none ; border-radius: 15px; height: 180px; width: 180px; background-repeat: no-repeat; background-size:180px; }
+#discord{border: solid 2px white; height:60px; width: 60px; border-radius: 15px; position: relative; left:560px; top:425px; padding: 10px; background-image: url(Discord-logo.png); background-size: 75px; background-repeat: no-repeat; background-position:top;}
+#piloti{ color:gold; position:absolute; margin-left:15px; top:80px; width:100px; height:20px; font-family: 'Times New Roman', Times, serif; text-decoration: none;font-weight: bold;}
+#img-lmp2{border: solid 2px red none; position: absolute; width: 150px; height: 80px; left: 30px; top: 450px; background-image: url(lmp2trasparente.png); background-size: 200px; background-position: center; background-repeat: no-repeat;}  
+#img-lmp2:hover{transform: scale(1.5);}
+#img-porschecup{border: solid 2px red none; position: absolute; width: 150px; height: 100px; left: 190px; top: 450px;  background-image: url(porschecuptrasparente.png); background-size: 200px; background-position: center; background-repeat: no-repeat;}  
+#img-porschecup:hover{transform: scale(1.5);}
+#img-gt3{border: solid 2px red none; position: absolute; width: 150px; height: 100px; left: 350px; top: 450px; background-image: url(gt3logo.png); background-size: 200px; background-position: center; background-repeat: no-repeat;}  
+#img-gt3:hover{transform: scale(1.5);}
+#img-formulab{border: solid 2px red none; position: absolute; width: 150px; height: 100px; left: 720px; top: 450px; background-image: url(formulab.png); background-size: 200px; background-position: center; background-repeat: no-repeat;} 
+#img-formulab:hover{transform: scale(1.5);}
+#img-gtendurance{border: solid 2px red none; position: absolute; width: 150px; height: 100px; left: 880px; top: 450px; background-image: url(gtendurance.png); background-size: 200px; background-position: center; background-repeat: no-repeat;}  
+#img-gtendurance:hover{transform: scale(1.5);}
+#img-enduranceimsa{border: solid 2px red none; position: absolute; width: 150px; height: 100px; left: 1035px; top: 450px; background-image: url(imsaendurance.png); background-size: 200px; background-position: center; background-repeat: no-repeat;}  
+#img-enduranceimsa:hover{transform: scale(1.5);}
+#img-gt4{border: solid 2px red none; position: absolute; width: 150px; height: 100px; left: 1160px; top: 450px; background-image: url(gt4.png); background-size: 200px; background-position: center; background-repeat: no-repeat;}        
+#img-gt4:hover{transform: scale(1.5);}
+#fotolmp2{ border: solid 2px red none; width: 320px; height:150px; position: absolute; margin-top: 10px; margin-left: 10px; background-image: url(lmp3trasparente.png);background-repeat: no-repeat; justify-content: center; background-size:310px;}
+#fotoporschecup{border: solid 2px red none ; width: 320px; height:150px; position: absolute; margin-top: 10px; margin-left: 950px; background-image: url(porschecupcartrasparente1.png);background-repeat: no-repeat;  background-size:450px; background-position-x: center; background-position-y: center; animation: foto 25s infinite linear; } 
+#fotomercedesgt3{border: solid 2px red none; width: 320px; height:150px; position: absolute; margin-top: 190px; margin-left: 8px; background-image: url(mercedesgt3.png);background-repeat: no-repeat;  background-size:350px; background-position-x: center; background-position-y: center;} 
+#fotolmhd{border: solid 2px red none ; width: 320px; height:150px; position: absolute; margin-top: 190px; margin-left: 958px; background-image: url(lmhd.png);background-repeat: no-repeat;  background-size:350px; background-position-x: center; background-position-y: center; transform: scale(1.2); } 
 
-    #boxuno{border: solid 1px gold none;
-    position: absolute;
-    left: 255px;
-    width: 165px;
-    height: 130px;
-    z-index: -50;
-    background-image: url(gt3logo.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 240px;
-    }
+/*@keyframes foto{
+100%{background-image: url(porschecuptrecartrasparente.png); background-size: contain;}
+}*/
 
-    #boxdue{border: solid 1px blue  none;
-    position: relative;
-    margin-left: -110px;
-    width: 150px;
-    height:120px;
-    margin-top:68%;
-    overflow: hidden;
-    z-index:-250;
-    background-image: url(iracing-logo.png);
-    background-position: center;
-    background-size: cover; 
-    background-repeat: no-repeat;
-    margin-top: 145px;}  
+@keyframes sfondo{
+0%{background-image: url(paulriccard.png);  width:550px; height: 350px;}
+100%{background-image: url(imola.png);width:550px; height: 350px;}}
 
-    #conteinerdue{border: solid 1px green none;
-        color: red;
-         position: absolute;
-          margin-left:0px;
-          width: 480px;
-          height: 250px;
-          margin-top:300px;
-          background-image: url(lmhd.png);
-          background-position: center;
-           background-repeat: no-repeat;
-          background-size: contain;
-        }
 
-    #conteinertre{border: solid 1px white none; 
-        color: gold;
-        position: absolute;
-        margin-left: 0px;
-        width: 480px;
-        height: 250px;
-        margin-top: 600px;
-        background-image: url(lmp3trasparente.png);
-          background-position: center;
-           background-repeat: no-repeat;
-          background-size: contain;
-     }
+@media(max-width: 800px){
+    #img-gt3{height: 250px;}
+}
 
-     /*@media screen and (max-widht:767px){
-        
-     }*/
 
-</style>
-<script>
-    var menubtn = document.getElementById("menubtn")
-    var nav = document.getElementById("nav")
-    nav.style.right = "-250px"
-    menubtn.onclick = function(){
-        if(nav.style.right == "-250px"){
-        nav.style.right = "0"; 
-    }
-    else{
-        nav.style.right = "-250px"
-    }}
 
-</script>
+ 
+ </style>
 </body>
 </html>
