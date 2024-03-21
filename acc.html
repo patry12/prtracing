@@ -7,12 +7,13 @@
 <body>
     <div id="navbar">
         <ul>
-            <li><a href="iracing2.html">HOME</a></li>
+            <li><a href="index.html">HOME</a></li>
             <li><a href="work.html">IRACING</a></li>
             <li><a href="work.html"> 4-FUN</a></li>
             <li><a href="work.html">CAMPIONATO</a></li>
         </ul>
     </div>
+    <div id="menubtn"></div>
     <div id="boxstemmaacc"></div>
    
 
@@ -27,9 +28,11 @@
 
         #boxstemmaacc{position: absolute;
         border: solid 2px red none;
-        margin-left: 500px;
-        height: 150px;
+        margin-left: 215px;
+        top: 8px;
+        height: 48px;
         width: 180px;
+        overflow: hidden;
         background-image: url(acclogo.png);
         background-position: center;
         background-repeat: no-repeat;
@@ -42,9 +45,11 @@
             border: solid 1px red none;
             position: absolute;
             margin-left:0px; 
+            top: -200px;
             width: 165px;
             height: 215px;
             overflow: hidden;
+            transition: 0.5s;
             border-radius: 0px 5px 5px 0px;
            }
 
@@ -64,13 +69,42 @@
            font-family: serif;
            padding: 0px;
            margin-left: 0px;
-         }      
+         } 
+         
+         #menubtn{
+        border: solid 3px rgb(0, 47, 255);
+        cursor: pointer;
+        overflow: hidden;
+        background-image: url(prt.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position:absolute;
+        margin-left: 260px;
+        top: 70px;
+         }
+
+         #menubtn:hover{transform: scale(1.3);}
+
        
-        
+     </style>
+    
+    <script>
+    var menubtn = document.getElementById("menubtn")
+    var nav = document.getElementById("navbar")
+    nav.style.top = "-200px"
+    menubtn.onclick = function(){
+        if(nav.style.top == "-200px"){
+        nav.style.top = "0px"; 
+    }
+    else{
+        nav.style.top = "-200px"
+    }}
 
 
-
-
-    </style>
+     </script>
 </body>
 </html>
