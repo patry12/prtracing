@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>prova22</title>
+</head>
+<body>
+    
+    <div id="lista">tabella</div> 
+    
+   
+   
+   <style>
+        body{background-color: black;}
+        div{border: solid 2px rgb(0, 47, 255) ; width: 250px ; height: 252px;} 
+    
+    
+    </style>
+
+
+
+<script>
+
+let requstURL = '/garaprova.json';
+let request = new XMLHttpRequest();
+request.open('GET',requstURL);
+request.responseType = 'json';
+request.send();
+
+request.onload = function(){
+     const gara = request.response;
+    console.log(gara);
+  }
+
+
+   /* let gara;
+    let url = './garaprova.json';  
+  fetch(url)
+  .then(Response => Response.json())
+  .then(json => {
+   gara = json;
+    console.log('fetch:',gara);
+  });*/
+
+</script>
+
+
+</body>
+</html>

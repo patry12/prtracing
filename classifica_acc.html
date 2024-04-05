@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>classificagt3</title>
+</head>
+<body>
+  
+  <a href="index.html"><button id="button_home"> HOME </button> </a>                          
+  <button id="button_calendario"> CALENDARIO </button>
+  <button id="button_classifica">CLASSIFICA</button>
+  
+  <div id="calendario">
+    <div id="data_uno">1
+           <div id="box_uno">1<div id="box_due">2</div></div></div>
+    <div id="data_due"><div id="immagine_due"></div>2</div>
+    <div id="data_tre"><div id="immagine_tre"></div>3</div>
+    <div id="data_quattro"><div id="immagine_quattro"></div>4</div>
+  </div>
+
+  
+
+   <div id="classe"></div> 
+
+     <style>
+       #classe{border: solid 2px rgba(255, 0, 0, 0.705) none; width: 150px; height :50px; position: absolute;  transition: 2s;}
+       #button_home{border: solid 2px  rgba(255, 0, 0, 0.705); border-radius: 50%; position: absolute; left: 185px; top:9px; width: 100px; height: 100px;  cursor: pointer; font-weight: bold; color: rgb(0, 23, 233); background-color: transparent;}
+       #button_classifica{ border: solid 2px  rgba(255, 0, 0, 0.705); border-radius: 50%; position: absolute; left: 50px; top:146px; width: 100px; height: 100px;  cursor: pointer; font-weight: bold; color: rgb(0, 23, 233); background-color: transparent;}
+       #button_calendario{ border: solid 2px  rgba(255, 0, 0, 0.705); border-radius: 50%; position: absolute; left: 90px; top:50px; width: 100px; height: 100px;  cursor: pointer; font-weight: bold; color: rgb(255, 255, 255);  background-color: transparent;}
+       #calendario{border: solid  2px gold none; position: absolute; width: 550px; height:550px; left: 700px; background-color: transparent; overflow: hidden; transition: 4s; padding:0px; justify-items: center;}
+       #data_uno{border: solid 2px red none; color: white; width: 99%; height: 28%; overflow: hidden; position: absolute;}
+       #box_uno{border: solid 2px green none ; width: 100px; height: 100px; background-image: url(brandsscrittasvg.png); background-position: center; background-repeat: no-repeat;background-size: 150px; position: absolute;}
+       #box_due{border: solid 2px rgb(0, 23, 128)none ; width: 230px; height: 145px; background-image: url(branshachcircuit.png); background-position: center; background-repeat: no-repeat;background-size: 180px; position: relative; left: 250px; top:-38px;}
+       #data_due{ border: solid 2px rgb(111, 0, 255)none ; color: white; width: 99%; height: 28%; position: absolute; top: 160px;}
+       #data_tre{ border: solid 2px rgb(9, 255, 0) none; color: white; width: 99%; height: 28%; position: absolute; top: 320px;}
+       #data_quattro{border: solid 2px rgb(17, 0, 255) none ; color: white; width: 99%; height:28%; position: absolute; top: 480px;}
+
+       body{background-image:url(ACCSFONDO.png);
+       background-size: auto;  background-repeat: repeat; 
+        margin:0px;}
+        table{border: solid 2px gold none ; background-color: transparent;  color: white;  position: absolute; left: -20px; top: 100px; padding: 0px; height:auto; border-radius: 15px; z-index: -20; transition: 5s ease-in-out; overflow: hidden;}
+        thead{ border: solid 2px blue;}
+        
+
+        #id{ color: red; padding: 1px; } 
+        #nome{ color: white;} 
+        #punti{color: rgb(3, 250, 3);padding: 1px; }
+        #numerico{background-color: red; border-radius:13px 0px 13px 0px; 
+        color: white; border-top-color: white; border:solid 3px;
+        width:38px; height: 25px; justify-content: center; padding-top:2px;}
+        #nomi{ color: rgb(255, 255, 255); font-size: 20x; background:linear-gradient(100deg,red,black); border-radius:0px 10px 1px 10px; 
+         border-top-color: white; border:solid 3px; width:80px; height: 25px;
+         text-align: center; padding: 0px 10px 0px 5px; }
+         #punti2{color: rgb(115, 255, 0); padding: 6px;}
+         #car{ color: white;}   
+         #auto{ text-align: start; }
+         .posizionidinamiche{border:solid 1px red; background:linear-gradient(5deg, red,white,rgb(13, 247, 5)); width:  15px; }
+         #car{border: solid 2px red none;}
+         #logo_classifica{border: solid 2px red  none;}
+        #logo{ border:solid 2px red none ; width: 120px; height:50px;  overflow: hidden; border-radius: 15px 15px 15px 15px;}
+         
+         .cars{color:rgb(255, 255, 255); text-align: center;}
+     </style>
+
+
+     <script>
+
+    var menubtn = document.getElementById("button_classifica")
+    var info = document.getElementById("classe")
+    info.style.left = "-450px"
+    menubtn.onclick = function(){
+        if(info.style.left == "-450px"){
+        info.style.left = "250px";
+        
+    }
+    else{
+        info.style.left = "-450px"
+    }}
+
+    var calendariobtn = document.getElementById("button_calendario")
+    var calendario = document.getElementById("calendario")
+    calendario.style.top = "-580px"
+    calendariobtn.onclick = function(){
+        if(calendario.style.top == "-580px"){
+        calendario.style.top = "55px";
+        
+    }
+    else{
+        calendario.style.top = "-580px"
+    }}
+
+
+   const pilota_uno = "alessio";   const pilota_sei = "pilota7";      const pilota_undici = "pilota21";     const pilota_sedici= "pilota16";
+   const pilota_due = "patrizio";      const pilota_sette = "pilota8";   const pilota_dodici = "pilota12";     const pilota_diciasette = "pilota17";
+   const pilota_tre = "fabio";    const pilota_otto = "pilota9";   const pilota_tredici = "pilota13";    const pilota_diciotto= "pilota18";
+   const pilota_quattro = "alex"; const pilota_nove = "pilota10";    const pilota_quattordici ="pilota14"; const pilota_dicianove = "pilota19";
+   const pilota_cinque = "ivan"; const pilota_dieci = "pilota11";     const pilota_quindici="pilota15";     const pilota_20= "pilota20";
+
+      const punti_primo = Number(20);
+      const punti_due = Number(10);
+      const punti_tre = Number(5);
+      const punti_quattro = Number(2);
+
+      const  amg = "amg gt3"              
+      const ferrari = "ferrari gt3"
+      const lamborghini = "lamborghini gt3"
+      const porsche = "porsche gt3"
+      const meclaren = "meclaren gt3"
+      const bmw = "bmw gt3"
+      const fotoamg = "<img src='amgclassifica.jpg'>"
+      const fotomeclaren = "<img src='meclaren4.png'>"
+      const fotoferrari = "<img src='ferrarilogo.png'>"
+      const fotolambo = "<img src='lamborghinistemma.png'>"
+      const fotobmw = "<img src='bmwlogo.png'>"
+      
+
+
+
+     //fotoamg.style.height ="10px"
+          //const  = document.createElement('img');
+          //let div1 = document.createElement('div');
+          //foto.src = "amgclassifica.jpg";
+          //document.body.appendChild(div1);
+          //div1.appendChild(img);
+         
+         
+      
+      //const  uno= document.querySelector('primario');
+
+        const classifica =[ 
+      pilota_a = {nome: pilota_uno , punti: punti_quattro + punti_quattro, auto: amg , foto:fotoamg},         {nome: pilota_undici, punti: punti_quattro + punti_due , auto: ferrari, foto:fotoferrari}, 
+      pilota_b ={nome: pilota_due, punti: punti_tre + punti_primo + punti_tre , auto: ferrari, foto:fotoferrari },          {nome: pilota_dodici , punti: punti_quattro + punti_due + punti_primo , auto: porsche  }, 
+      pilota_c ={nome: pilota_tre, punti: punti_primo + punti_primo + punti_primo , auto: lamborghini,foto:fotolambo} , {nome: pilota_tredici, punti: punti_quattro + punti_due , auto: amg ,foto:fotoamg }, 
+        {nome: pilota_quattro, punti:punti_primo, auto:porsche },                                 {nome: pilota_quattordici , punti: punti_due + punti_primo , auto: lamborghini }, 
+        {nome: pilota_cinque, punti: punti_primo, auto:meclaren,foto:fotomeclaren },                                      {nome: pilota_quindici , punti: punti_quattro + punti_due + punti_primo , auto: amg ,foto:fotoamg  },  
+        {nome: pilota_sei, punti: punti_primo, auto:bmw, foto:fotobmw},                                         {nome: pilota_sedici, punti: punti_quattro + punti_primo , auto: amg , foto:fotoamg  }, 
+        {nome: pilota_sette, punti: punti_primo + punti_quattro, auto:amg ,foto:fotoamg},                                       {nome: pilota_diciasette , punti:  punti_due + punti_primo , auto: lamborghini }, 
+        {nome: pilota_otto, punti: punti_primo, auto:amg ,foto:fotoamg},                                        {nome: pilota_diciotto , punti: punti_quattro + punti_primo , auto: ferrari , foto:fotoferrari }, 
+        {nome: pilota_nove, punti: punti_primo, auto:amg ,foto:fotoamg},                                        {nome: pilota_dicianove , punti: punti_quattro + punti_due , auto: porsche },  
+        {nome: pilota_dieci, punti:  punti_primo + punti_primo + punti_tre, auto:amg,foto:fotoamg},  {nome:pilota_20,punti:punti_primo,auto:ferrari}];
+
+
+var quadrato = document.getElementById('classe');
+var tabella = '<table><thead><tr><th id= id>POS</th><th id= nome>NOME</th><th id=punti>PUNTI</th><th id= car >CAR</th><th id=logo_classifica ></th></tr></thead></tbody>';
+    
+    classifica.sort((a, b) => {       
+      return b.punti - a.punti });
+
+for(i=0;  i<classifica.length; i++){
+    tabella += '<tr><th><p id= "numerico"> '+(i + 1 )+ '</p></th><th><p id= "nomi">'+ classifica[i].nome +'</p></th><th id=punti2>' + classifica[i].punti +  '</th><th><p class= "cars">' + classifica[i].auto + '</p></th><th><p id= "logo">' + classifica[i].foto + '</p></th></tr>';
+
+    }  
+
+       tabella += '</tbody></table>';
+
+       quadrato.innerHTML = tabella ;
+
+      
+       var colore = document.querySelectorAll("p")[4] /*.textContent=55*/;
+       var colore1 = document.querySelectorAll("p")[5]; 
+       var colore2 = document.querySelectorAll("p")[6]; 
+       var colore3 = document.querySelectorAll("p")[7];
+       function colori(){                     /*pilota_a = alessio---pilota_b = patrizio*/
+        if( pilota_a.punti >  pilota_b.punti){
+            colore.style.color = "white";
+            colore1.style.color= "white";
+            colore2.style.color= "white";
+            colore3.style.color= "white";
+            console.log("ok");
+        }
+         else{ 
+            colore.style.color= "white";
+            colore1.style.color= "white";
+            colore2.style.color= "white";
+            colore3.style.color= "white";
+              console.log("NO");
+          }}
+
+        colori();  
+  
+         console.log(document.querySelectorAll("p"));
+      
+   
+
+     </script>
+</body>
+</html>

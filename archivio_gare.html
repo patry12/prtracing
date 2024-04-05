@@ -2,27 +2,48 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>archivio_gare</title>
+    <title>provafor</title>
 </head>
 <body>
-    <a id="home" href="home.html">HOME</a>
-    <button id="colore">CHANGE</button>
+    <div id="uno"> WORKING</div>
 
+    <style>
+        body{ background-color: black;}
+        #uno{border: solid 2px red ; width: 252px; height: 252px; 
+            position: absolute; color:black;}
 
-<style>
-    body{background-color: black;}
-    #home{border: solid 2px white; position: absolute; color:white; padding: 15px;}
-    #colore{position: relative; left: 150px; background-color:black; color: yellow;}
-</style>
+    </style>
 
-<script>
-    const btn = document.querySelector('button');
-    
-    btn.addEventListener('click',() => {
-        document.body.style.background = 'red';
-    });
+    <script>
+
+        var pilota_unoa = "patry";
+        var pilota_unob = "ale";
+        var pilota_unoc = "fabry";
+        var pilota_unod = "paolo";
+
+        const archivio = [
+         pilota_A ={nome : pilota_unoa },
+         pilota_B = {nome : pilota_unob },
+         pilota_C = {nome :pilota_unoc },
+         pilota_D = {nome :pilota_unod },
+        
+    ];
+
+  let controllo = document.getElementById('uno');
+  let lista = '<table><thead><tr><th id= id>POS</th><th id= nome>NOME</th><th id=punti>PUNTI</th><th id= car >CAR</th><th id=logo_classifica ></th></tr></thead></tbody>';
    
-</script>
+   
+    for(let i=0 ; i< archivio.length; i++){ 
+        lista += '<tr><th><p id= "numerico"> '+(i + 1 )+ '</p></th><th><p id= "nomi">'+ archivio[i].nome  +'</p></th><th id=punti2>' +  +  '</th><th><p class= "cars">' +  + '</p></th><th><p id= "logo">' + + '</p></th></tr>';
+    
+    };
+    lista += '</tbody></table>';
 
+    controllo.innerHTML = lista ;
+
+        /* console.log(  ` ok ${archivio.due}`);*/
+ console.log(archivio);
+
+  </script>
 </body>
 </html>
